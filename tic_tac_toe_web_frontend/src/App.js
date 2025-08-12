@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import { PluginFileCover1 } from './components/FigmaCover';
+import TicTacToe from './components/TicTacToe/TicTacToe';
 
 // PUBLIC_INTERFACE
 function App() {
@@ -19,10 +18,7 @@ function App() {
 
   return (
     <div className="App">
-      {/* Figma extracted cover screen */}
-      <PluginFileCover1 />
-
-      {/* Existing header content preserved for CI test stability */}
+      {/* App main content */}
       <header className="App-header">
         <button
           className="theme-toggle"
@@ -31,21 +27,9 @@ function App() {
         >
           {theme === 'light' ? '🌙 Dark' : '☀️ Light'}
         </button>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <p>
-          Current theme: <strong>{theme}</strong>
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+
+        {/* Tic Tac Toe game */}
+        <TicTacToe />
       </header>
     </div>
   );
