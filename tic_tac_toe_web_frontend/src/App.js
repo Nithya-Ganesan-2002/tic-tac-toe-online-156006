@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { PluginFileCover1 } from './components/FigmaCover';
 
 // PUBLIC_INTERFACE
 function App() {
@@ -18,9 +19,13 @@ function App() {
 
   return (
     <div className="App">
+      {/* Figma extracted cover screen */}
+      <PluginFileCover1 />
+
+      {/* Existing header content preserved for CI test stability */}
       <header className="App-header">
-        <button 
-          className="theme-toggle" 
+        <button
+          className="theme-toggle"
           onClick={toggleTheme}
           aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
         >
