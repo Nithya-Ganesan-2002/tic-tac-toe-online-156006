@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka+One&family=Fredoka:wght@500&family=Inter:wght@400;700&display=swap");
+
+:root {
+  /* Color tokens from design system */
+  --color-002940: #002940;
+  --color-f4f6f5: #f4f6f5;
+  --color-000000: #000000;
+  --color-9747ff: #9747ff;
+  --color-c5a0d7: #c5a0d7;
+  --color-43115b: #43115b;
+  --color-5a1e76: #5a1e76;
+  --color-2b0040: #2b0040;
+  --color-e2be00: #e2be00;
+  --color-48d2fe: #48d2fe;
+  --color-ffffff: #ffffff;
+  --color-bcdbf9: #bcdbf9;
+  --color-099c3b: #099c3b;
+  --color-035b21: #035b21;
+  --color-06802f: #06802f;
+  --color-975fb1: #975fb1;
+  --color-dcbf3f: #dcbf3f;
+
+  /* Font family tokens */
+  --font-fredoka-one: "Fredoka One", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  --font-fredoka: "Fredoka", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  --font-inter: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+
+  /* Typography tokens (subset: used styles) */
+  /* typo_13 */
+  --typo-13-font: var(--font-inter);
+  --typo-13-size: 28px;
+  --typo-13-weight: 400;
+  --typo-13-line-height: 33.8863639831543px;
+  --typo-13-color: var(--color-2b0040);
+
+  /* typo_15 */
+  --typo-15-font: var(--font-fredoka-one);
+  --typo-15-size: 331.6426696777344px;
+  --typo-15-weight: 400;
+  --typo-15-line-height: 188.04177856445312px;
+  --typo-15-color: var(--color-dcbf3f);
+
+  /* Border radius tokens */
+  --radius-5: 5px;
+  --radius-10: 10px;
+  --radius-12: 12px;
+  --radius-15: 15px;
+  --radius-50: 50px;
+  --radius-58-5139: 58.513946533203125px;
+  --radius-100: 100px;
+
+  /* Spacing scale (index-based from design system "spacing" array) */
+  --space-0: 6px;
+  --space-1: 19px;
+  --space-2: 22px;
+  --space-3: 24px;
+  --space-4: 28px;
+  --space-5: 29px;
+  --space-6: 34px;
+  --space-7: 34px; /* 34.000000000000036 normalized */
+  --space-8: 39px;
+  --space-9: 46px;
+  --space-10: 51px;
+  --space-11: 54px;
+  --space-12: 55px;
+  --space-13: 57px;
+  --space-14: 75px;
+  --space-15: 76.5px;
+  --space-16: 80px;
+  --space-17: 84px;
+  --space-18: 87px;
+  --space-19: 94px;
+  --space-20: 95px;
+  --space-21: 98.5px;
+  --space-22: 99px;
+  --space-23: 100px;
+  --space-24: 100.5px;
+  --space-25: 101px;
+  --space-26: 103px;
+  --space-27: 111px;
+  --space-28: 124px;
+  --space-29: 130px;
+  --space-30: 139px;
+  --space-31: 150px;
+  --space-32: 155px;
+  --space-33: 171px;
+  --space-34: 176px;
+  --space-35: 188px;
+  --space-36: 190px;
+  --space-37: 201px;
+  --space-38: 214px;
+  --space-39: 227px;
+  --space-40: 254px;
+  --space-41: 267px;
+  --space-42: 282px;
+  --space-43: 360px;
+  --space-44: 506px;
+  --space-45: 507px;
+  --space-46: 509px;
+  --space-47: 565px;
+  --space-48: 574px;
+  --space-49: 624px;
+  --space-50: 643px;
+  --space-51: 658px;
+  --space-52: 710.3593139648438px;
+  --space-53: 750px;
+  --space-54: 844px;
+  --space-55: 960px;
+  --space-56: 1055.591552734375px;
+  --space-57: 1257px;
+  --space-58: 1726px;
+  --space-59: 1920px;
+}
+
+/* Base reset and layout helpers */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-2b0040);
+  color: var(--color-ffffff);
+  font-family: var(--font-inter);
+}
+
+.screen-wrapper {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.screen {
+  position: relative;
+  transform-origin: top left;
+  image-rendering: auto;
+}
+
+/* Typography utility classes derived from tokens */
+.typo-13 {
+  font-family: var(--typo-13-font);
+  font-size: var(--typo-13-size);
+  font-weight: var(--typo-13-weight);
+  line-height: var(--typo-13-line-height);
+  color: var(--typo-13-color);
+}
+
+.typo-15 {
+  font-family: var(--typo-15-font);
+  font-size: var(--typo-15-size);
+  font-weight: var(--typo-15-weight);
+  line-height: var(--typo-15-line-height);
+  color: var(--typo-15-color);
+}

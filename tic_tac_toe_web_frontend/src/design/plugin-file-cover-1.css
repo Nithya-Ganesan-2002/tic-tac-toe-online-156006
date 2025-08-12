@@ -1,0 +1,53 @@
+/* Screen: Plugin / file cover - 1 (1920 x 960) */
+.screen.plugin-file-cover-1 {
+  width: 1920px;
+  height: 960px;
+  background: var(--color-5a1e76); /* style_23 -> color_5a1e76 */
+  overflow: hidden;
+}
+
+/* image 1 (RECTANGLE with rounded corners) */
+.screen.plugin-file-cover-1 img.image-1 {
+  position: absolute;
+  left: 1248px;   /* 288 - (-960) */
+  top: 97px;      /* -383 - (-480) */
+  width: 710.3593139648438px;
+  height: 1055.591552734375px;
+  object-fit: cover;
+  border-radius: var(--radius-58-5139); /* style_24 radius */
+  display: block;
+}
+
+/* tic. tac.toe. (TEXT) */
+.screen.plugin-file-cover-1 .title {
+  position: absolute;
+  left: -38px;   /* -998 - (-960) */
+  top: 395px;    /* -85 - (-480) */
+  width: 643px;
+  height: 565px;
+  white-space: pre-line;
+  /* Typography via .typo-15 class */
+}
+
+/* Frame 1 (horizontal container with background and radius) */
+.screen.plugin-file-cover-1 .badge {
+  position: absolute;
+  left: 793px; /* -167 - (-960) */
+  top: 480px;  /* 0 - (-480) */
+  width: 267px;
+  height: 54px;
+  background: var(--color-975fb1); /* style_20 background */
+  border-radius: var(--radius-15);
+  overflow: hidden;
+}
+
+/* Made with Figma (TEXT inside badge) */
+.screen.plugin-file-cover-1 .badge .label {
+  position: absolute;
+  left: 20px; /* child x (-147) - parent x (-167) = 20 */
+  top: 10px;  /* 10 - 0 = 10 */
+  width: 227px;
+  height: 34px;
+  display: block;
+  /* Typography via .typo-13 class */
+}
