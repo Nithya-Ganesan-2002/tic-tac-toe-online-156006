@@ -1,0 +1,132 @@
+.ttt-container {
+  margin: 24px auto;
+  max-width: 720px;
+  padding: 16px;
+  border: 1px solid var(--border-color, rgba(0,0,0,0.1));
+  border-radius: 12px;
+  background: var(--bg-secondary, #f8f9fa);
+  color: var(--text-primary, #1a1a1a);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+}
+
+.ttt-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.ttt-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.ttt-group {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ttt-label {
+  font-weight: 600;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.ttt-select {
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color, rgba(0,0,0,0.1));
+  background: var(--bg-primary, #fff);
+  color: var(--text-primary, #1a1a1a);
+}
+
+.ttt-scores {
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.ttt-status {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.ttt-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.ttt-btn {
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: none;
+  background: var(--button-bg, #1976d2);
+  color: var(--button-text, #fff);
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.ttt-btn:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.ttt-btn-secondary {
+  background: #6c757d;
+}
+
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 12px 0 8px;
+}
+
+.ttt-square {
+  aspect-ratio: 1 / 1;
+  border: 1px solid var(--border-color, rgba(0,0,0,0.1));
+  border-radius: 10px;
+  background: var(--bg-primary, #fff);
+  font-size: clamp(32px, 8vw, 48px);
+  font-weight: 800;
+  color: var(--text-primary, #1a1a1a);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  transition: transform 0.1s ease, background 0.2s ease;
+}
+
+.ttt-square:hover {
+  transform: translateY(-2px);
+  background: var(--bg-secondary, #f8f9fa);
+}
+
+.ttt-square.filled {
+  cursor: default;
+}
+
+.ttt-history {
+  margin-top: 12px;
+}
+
+.ttt-history-title {
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.ttt-history-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.ttt-history-empty {
+  opacity: 0.7;
+}
+
+@media (max-width: 540px) {
+  .ttt-container { margin: 16px; }
+}
