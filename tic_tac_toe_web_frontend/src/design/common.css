@@ -26,12 +26,52 @@
   --font-inter: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 
   /* Typography tokens (subset: used styles) */
+  /* typo_9 */
+  --typo-9-font: var(--font-fredoka-one);
+  --typo-9-size: 94px;
+  --typo-9-weight: 400;
+  --typo-9-line-height: 113.74000549316406px;
+  --typo-9-color: var(--color-e2be00);
+  --typo-9-text-align: center;
+
+  /* typo_10 */
+  --typo-10-font: var(--font-fredoka-one);
+  --typo-10-size: 94px;
+  --typo-10-weight: 400;
+  --typo-10-line-height: 113.74000549316406px;
+  --typo-10-color: var(--color-48d2fe);
+  --typo-10-text-align: center;
+
+  /* typo_11 */
+  --typo-11-font: var(--font-fredoka);
+  --typo-11-size: 20px;
+  --typo-11-weight: 500;
+  --typo-11-line-height: 24.200000762939453px;
+  --typo-11-color: var(--color-000000);
+  --typo-11-text-align: left;
+
+  /* typo_12 */
+  --typo-12-font: var(--font-inter);
+  --typo-12-size: 42px;
+  --typo-12-weight: 700;
+  --typo-12-line-height: 50.82954406738281px;
+  --typo-12-color: var(--color-000000);
+  --typo-12-text-align: left;
+
   /* typo_13 */
   --typo-13-font: var(--font-inter);
   --typo-13-size: 28px;
   --typo-13-weight: 400;
   --typo-13-line-height: 33.8863639831543px;
   --typo-13-color: var(--color-2b0040);
+
+  /* typo_14 */
+  --typo-14-font: var(--font-fredoka-one);
+  --typo-14-size: 386.8304748535156px;
+  --typo-14-weight: 400;
+  --typo-14-line-height: 219.3333282470703px;
+  --typo-14-color: var(--color-dcbf3f);
+  --typo-14-text-align: left;
 
   /* typo_15 */
   --typo-15-font: var(--font-fredoka-one);
@@ -144,12 +184,57 @@ body {
 }
 
 /* Typography utility classes derived from tokens */
+.typo-9 {
+  font-family: var(--typo-9-font);
+  font-size: var(--typo-9-size);
+  font-weight: var(--typo-9-weight);
+  line-height: var(--typo-9-line-height);
+  color: var(--typo-9-color);
+  text-align: var(--typo-9-text-align);
+}
+
+.typo-10 {
+  font-family: var(--typo-10-font);
+  font-size: var(--typo-10-size);
+  font-weight: var(--typo-10-weight);
+  line-height: var(--typo-10-line-height);
+  color: var(--typo-10-color);
+  text-align: var(--typo-10-text-align);
+}
+
+.typo-11 {
+  font-family: var(--typo-11-font);
+  font-size: var(--typo-11-size);
+  font-weight: var(--typo-11-weight);
+  line-height: var(--typo-11-line-height);
+  color: var(--typo-11-color);
+  text-align: var(--typo-11-text-align);
+}
+
+.typo-12 {
+  font-family: var(--typo-12-font);
+  font-size: var(--typo-12-size);
+  font-weight: var(--typo-12-weight);
+  line-height: var(--typo-12-line-height);
+  color: var(--typo-12-color);
+  text-align: var(--typo-12-text-align);
+}
+
 .typo-13 {
   font-family: var(--typo-13-font);
   font-size: var(--typo-13-size);
   font-weight: var(--typo-13-weight);
   line-height: var(--typo-13-line-height);
   color: var(--typo-13-color);
+}
+
+.typo-14 {
+  font-family: var(--typo-14-font);
+  font-size: var(--typo-14-size);
+  font-weight: var(--typo-14-weight);
+  line-height: var(--typo-14-line-height);
+  color: var(--typo-14-color);
+  text-align: var(--typo-14-text-align);
 }
 
 .typo-15 {

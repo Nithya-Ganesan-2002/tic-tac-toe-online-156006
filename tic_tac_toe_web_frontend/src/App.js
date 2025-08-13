@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import { PluginFileCover1 } from './components/FigmaCover';
 import { TicTacToe } from './components/TicTacToe';
+import { BoardScreen } from './components/Board';
 
 /**
  * PUBLIC_INTERFACE
@@ -59,6 +60,7 @@ function App() {
 
       {/* Figma extracted cover screen (moved below header to keep game in view) */}
       <PluginFileCover1 />
+      <BoardScreen />
     </div>
   );
 }

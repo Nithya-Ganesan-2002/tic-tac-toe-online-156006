@@ -1,0 +1,154 @@
+ /* Screen: Board (2856 x 1726) */
+.screen.board {
+  width: 2856px;
+  height: 1726px;
+  background: var(--color-5a1e76); /* style_7 -> color_5a1e76 */
+  border-radius: var(--radius-100);
+  overflow: hidden;
+  position: relative;
+}
+
+/* Main panel: "tic-tac-to" (style_8) */
+.screen.board .tic-tac-to {
+  position: absolute;
+  left: 1006px; /* -1431 - (-2437) */
+  top: 234px;   /* -5586 - (-5820) */
+  width: 844px;
+  height: 1257px;
+  background: var(--color-2b0040); /* style_8 background */
+  border-radius: var(--radius-50);
+  overflow: hidden;
+}
+
+/* Scoreboard container (Frame: container) */
+.screen.board .tic-tac-to .scoreboard {
+  position: absolute;
+  left: 167px;  /* -1264 - (-1431) */
+  top: 112px;   /* -5474 - (-5586) */
+  width: 509px;
+  height: 139px;
+}
+
+.screen.board .tic-tac-to .scoreboard .score-card {
+  position: absolute;
+  top: 0;
+  width: 155px;
+  height: 139px;
+  border-radius: var(--radius-10);
+}
+
+/* X card at left:0, Draw at left:177, O at left:354 */
+.screen.board .tic-tac-to .scoreboard .score-x   { left: 0px;   background: var(--color-48d2fe); } /* style_13 */
+.screen.board .tic-tac-to .scoreboard .score-draw{ left: 177px; background: var(--color-bcdbf9); } /* style_15 */
+.screen.board .tic-tac-to .scoreboard .score-o   { left: 354px; background: var(--color-e2be00); } /* style_12 */
+
+.screen.board .tic-tac-to .scoreboard .score-card .score-title {
+  position: absolute;
+  top: 29.5px;
+  left: 30.5px; /* 49px for draw card will still look centered due to different text width; exact per-card offsets below */
+  color: var(--color-000000);
+}
+
+/* Fine-tune per card to match Figma exact offsets */
+.screen.board .tic-tac-to .scoreboard .score-draw .score-title { left: 49px; }
+.screen.board .tic-tac-to .scoreboard .score-o .score-title    { left: 30px; }
+
+.screen.board .tic-tac-to .scoreboard .score-card .score-box {
+  position: absolute;
+  top: 63.5px;
+  left: 26px;
+  width: 103px;
+  height: 46px;
+  background: var(--color-ffffff); /* style_14 */
+  border-radius: var(--radius-10);
+}
+
+.screen.board .tic-tac-to .scoreboard .score-card .score-box .score-value {
+  position: absolute;
+  top: -3px;
+  left: 37px;
+  width: 29px;
+  height: 51px;
+  color: var(--color-000000);
+}
+
+/* Grid container (style_9) */
+.screen.board .tic-tac-to .grid-container {
+  position: absolute;
+  left: 135px; /* -1296 - (-1431) */
+  top: 291px;  /* -5295 - (-5586) */
+  width: 574px;
+  height: 574px;
+  background: var(--color-2b0040);
+  border-radius: var(--radius-12);
+  display: grid;
+  grid-template-columns: repeat(3, 150px);
+  grid-auto-rows: 150px;
+  gap: 28px; /* inferred from layout spacing */
+  padding: 37px 34px; /* inferred top/left edges from Figma positions */
+  box-sizing: border-box;
+}
+
+/* Cells (style_5) */
+.screen.board .tic-tac-to .grid-container .cell {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  background: var(--color-43115b);
+  border-radius: var(--radius-10);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* Hover overlay (from "hover" instance layer) */
+.screen.board .tic-tac-to .grid-container .cell .hover {
+  position: absolute;
+  inset: 0;
+  background: transparent;
+  transition: background 0.2s ease;
+  pointer-events: none;
+}
+.screen.board .tic-tac-to .grid-container .cell:hover .hover {
+  background: rgba(255,255,255,0.06);
+}
+
+/* Symbol text inside cells */
+.screen.board .tic-tac-to .grid-container .cell .symbol {
+  position: relative;
+  white-space: pre;
+}
+
+/* Specific cell text color hint: g11 used blue typo_10, others use gold typo_9 */
+/* .g11 .symbol already uses .typo-10 in markup */
+
+/* Badge "Made with Figma" elsewhere on the screen (Frame 1 / style_20) */
+.screen.board .badge-other {
+  position: absolute;
+  left: 2487px; /* 50 - (-2437) */
+  top: 1601px;  /* -4219 - (-5820) */
+  width: 267px;
+  height: 54px;
+  background: var(--color-975fb1);
+  border-radius: var(--radius-15);
+  overflow: hidden;
+}
+.screen.board .badge-other .label {
+  position: absolute;
+  left: 20px;
+  top: 10px;
+  width: 227px;
+  height: 34px;
+  display: block;
+}
+
+/* Title "tic. tac.toe." (typo_14) */
+.screen.board .hero-title {
+  position: absolute;
+  left: -50px; /* -2487 - (-2437) */
+  top: 1040px; /* -4780 - (-5820) */
+  width: 750px;
+  height: 658px;
+  white-space: pre-line;
+}
